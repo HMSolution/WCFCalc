@@ -41,5 +41,10 @@ namespace GettingStarted
             Console.WriteLine("Return: {0}", result);
             return result;
         }
+
+        public string Respond(string message)
+        {
+            return "I'm the Server and you send me: " + message;
+        }
     }
 }

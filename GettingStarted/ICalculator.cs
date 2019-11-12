@@ -20,5 +20,7 @@ namespace GettingStarted
         double Multiply(double n1, double n2);
         [OperationContract] // Es wird keine Antwort an den Client gesendet, eigentlich für Voids vorgesehen, um clients nicht mit leeren Nachrichten zu freezen
         double Divide(double n1, double n2);
+        [OperationContract]
+        string Respond(string message);
     }
 }

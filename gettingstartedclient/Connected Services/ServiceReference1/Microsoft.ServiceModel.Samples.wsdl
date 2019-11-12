@@ -30,6 +30,12 @@
   <wsdl:message name="ICalculator_Divide_OutputMessage">
     <wsdl:part name="parameters" element="tns:DivideResponse" />
   </wsdl:message>
+  <wsdl:message name="ICalculator_Respond_InputMessage">
+    <wsdl:part name="parameters" element="tns:Respond" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Respond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RespondResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICalculator">
     <wsdl:operation name="Add">
       <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/Add" message="tns:ICalculator_Add_InputMessage" />
@@ -46,6 +52,10 @@
     <wsdl:operation name="Divide">
       <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/Divide" message="tns:ICalculator_Divide_InputMessage" />
       <wsdl:output wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/DivideResponse" message="tns:ICalculator_Divide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Respond">
+      <wsdl:input wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/Respond" message="tns:ICalculator_Respond_InputMessage" />
+      <wsdl:output wsaw:Action="http://Microsoft.ServiceModel.Samples/ICalculator/RespondResponse" message="tns:ICalculator_Respond_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

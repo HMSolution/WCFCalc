@@ -40,6 +40,19 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
+            // Custom playaround with the service
+
+            var end = false;
+            while(!end)
+            {
+                Console.WriteLine("Send a message to the server!");
+                Console.WriteLine();
+                var message = Console.ReadLine();
+                var response = client.Respond(message);
+                Console.WriteLine("The server responded: " + response);
+                Console.WriteLine();
+            }          
+
             // Step 3: Close the client to gracefully close the connection and clean up resources.
             Console.WriteLine("\nPress <Enter> to terminate the client.");
             Console.ReadLine();
